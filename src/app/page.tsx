@@ -4,8 +4,10 @@ import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
+  const currentRoute = usePathname();
   const [searchTerm, setSearchTerm] = useState("");
   const [showData, setShowData] = useState([]);
 
@@ -28,7 +30,12 @@ export default function Home() {
         <h2 className={styles.description}>TV Show Search App</h2>
 
         <nav>
-          <Link className={styles.link} href="/">
+          <Link
+            className={`${styles.link} ${
+              currentRoute == "/" ? styles.activeLink : ""
+            }`}
+            href="/"
+          >
             Search
           </Link>
           <Link className={styles.link} href="/login">
