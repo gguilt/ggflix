@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "@/styles/components/Header.module.css";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,8 +10,14 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.logo}>Soleil</h1>
-      <h2 className={styles.description}>TV Show Search App</h2>
+      <Image
+        className={styles.logo}
+        src="/logo.svg"
+        alt="Soleil Logo"
+        width={320}
+        height={128}
+      />
+      <h1 className={styles.description}>TV Show Search App</h1>
 
       <nav>
         <Link
