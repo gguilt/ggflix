@@ -1,11 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
+"use client";
+
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import axios from "axios";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,16 +23,21 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Soleil</title>
-        <meta name="description" content="TV Show Search App" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={styles.main}>
+      <header className={styles.header}>
         <h1 className={styles.logo}>Soleil</h1>
         <h2 className={styles.description}>TV Show Search App</h2>
 
+        <nav>
+          <Link className={styles.link} href="/">
+            Search
+          </Link>
+          <Link className={styles.link} href="/login">
+            Login
+          </Link>
+        </nav>
+      </header>
+
+      <main className={styles.main}>
         <form className={styles.form} onSubmit={searchSubmit}>
           <input
             placeholder="Enter TV Show Name"
