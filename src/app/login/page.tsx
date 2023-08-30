@@ -1,7 +1,13 @@
+import Header from "@/components/Header";
+
 export default function Login() {
   return (
     <>
-      <h1>Hello World!</h1>
+      <Header />
+
+      <main>
+        <h1>Coming soon.</h1>
+      </main>
     </>
   );
 }
