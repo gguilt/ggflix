@@ -4,11 +4,8 @@ import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import axios from "axios";
 import Header from "@/components/Header";
-import useAuth from "@/context/AuthProvider";
 
 export default function Home() {
-  const { auth, setAuth } = useAuth();
-
   const [searchTerm, setSearchTerm] = useState("");
   const [showData, setShowData] = useState([]);
 
@@ -27,8 +24,6 @@ export default function Home() {
   return (
     <>
       <Header />
-
-      {auth ? "LOGGED" : "NOPE"}
 
       <main className={styles.main}>
         <form className={styles.form} onSubmit={searchSubmit}>

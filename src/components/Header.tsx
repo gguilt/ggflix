@@ -6,7 +6,6 @@ import styles from "@/styles/components/Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export default function Header() {
   const currentRoute = usePathname();
