@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Providers } from "./providers";
+import "@/styles/global.css";
 
 export const metadata: Metadata = {
   title: "Soleil",
