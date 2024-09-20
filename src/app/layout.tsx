@@ -17,6 +17,11 @@ export default function RootLayout({
       <body>
         <Providers>{children}</Providers>
       </body>
+      <script
+        defer
+        src="https://umi.gokay.works/script.js"
+        data-website-id="b4bdcc6b-e75d-46d5-af4b-088663966012"
+      ></script>
     </html>
   );
 }
